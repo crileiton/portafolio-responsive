@@ -329,3 +329,25 @@ figure {
   height: inherit;
   flex-wrap: inherit;
 }
+
+
+/* 2 forma de  media queries */
+
+/* Si se trabaja en Desktop first se empieza desde el MQ más grande  */
+
+@media screen and (max-width: 1024px){
+
+}
+
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 480px){
+
+}
+
+@media screen and (max-width: 320px){
+
+}
