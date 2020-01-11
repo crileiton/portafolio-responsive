@@ -31,7 +31,7 @@
 </head>
 
 <body>
-  <i class="icon-menu burger-button"></i>
+  <i class="icon-menu burger-button" id="burger-menu"></i>
   <header class="header">
     <div class="container">
       <figure class="logo">
@@ -102,7 +102,7 @@
   <div class="container">
     <h2 class="event-list-title">Más sobre mi experiencia</h2>
   </div>
-  
+
   <section id="eventos" class="event-list">
     <div class="container">
       <article class="event">
@@ -120,7 +120,9 @@
       <article class="event">
         <figure class="event-imageContainer">
           <div class="flexible-video">
-            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/trWiiIAuHHk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/trWiiIAuHHk"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
           </div>
           <!-- <img class="event-image" src="images/platzi-conf.jpg" width="500" /> -->
         </figure>
@@ -182,6 +184,25 @@
       </div>
     </div>
   </footer>
+  <script>
+    // console.log(document.querySelector('.menu'));
+
+    const menu = document.querySelector('.menu');
+    console.log(menu);
+    const burgerButton = document.querySelector('#burger-menu');
+    console.log(burgerButton);
+
+    burgerButton.addEventListener('click', mostrarOcultarMenu);
+
+    function mostrarOcultarMenu() {
+      if (menu.classList.contains('is-active')) {
+        menu.classList.remove('is-active');
+      }
+      else {
+        menu.classList.add('is-active');
+      }
+    }
+  </script>
 </body>
 
 </html>
