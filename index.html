@@ -187,12 +187,25 @@
   <script>
     // console.log(document.querySelector('.menu'));
 
+    const ipad=     window.matchMedia('screen and (max-width: 767px)');
+
+
     const menu = document.querySelector('.menu');
     console.log(menu);
     const burgerButton = document.querySelector('#burger-menu');
     console.log(burgerButton);
 
-    burgerButton.addEventListener('click', mostrarOcultarMenu);
+
+    ipad.addListener(validar)
+
+    function validar(event){
+      if(event.matches){
+        burgerButton.addEventListener('click', mostrarOcultarMenu);
+      }
+      else{
+        burgerButton.removeEventListener('click', mostrarOcultarMenu);
+      }
+    }
 
     function mostrarOcultarMenu() {
       if (menu.classList.contains('is-active')) {
