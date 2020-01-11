@@ -179,42 +179,39 @@
       </div>
       <div>
         <p>
-          Designed with 💖 by <a href="https://twitter.com/thespianartist">@thespianartist</a>
+          Implemented with 💖 by <a href="https://www.linkedin.com/in/crileiton/">@crileiton</a>
         </p>
       </div>
     </div>
   </footer>
   <script>
-    // console.log(document.querySelector('.menu'));
-
-    const ipad=     window.matchMedia('screen and (max-width: 767px)');
-
-
-    const menu = document.querySelector('.menu');
-    console.log(menu);
-    const burgerButton = document.querySelector('#burger-menu');
-    console.log(burgerButton);
+    // console.log('Hola mundo! es mi primera linea en JS');
+    const ipad = window.matchMedia('screen and (max-width: 767px)')
+      const menu = document.querySelector('.menu');
+      // console.log(menu);
+      const burgerButton = document.querySelector('#burger-menu');
+      // console.log(burgerButton);
 
 
-    ipad.addListener(validar)
+      ipad.addListener(validation)
 
-    function validar(event){
-      if(event.matches){
-        burgerButton.addEventListener('click', mostrarOcultarMenu);
+      function validation(event) {
+        if (event.matches) {
+          burgerButton.addEventListener('click', hideShow)
+        } else {
+          burgerButton.removeEventListener('click', hideShow)
+        }
       }
-      else{
-        burgerButton.removeEventListener('click', mostrarOcultarMenu);
-      }
-    }
+      validation(ipad);
 
-    function mostrarOcultarMenu() {
-      if (menu.classList.contains('is-active')) {
-        menu.classList.remove('is-active');
+
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active');
+        } else {
+          menu.classList.add('is-active');
+        }
       }
-      else {
-        menu.classList.add('is-active');
-      }
-    }
   </script>
 </body>
 
